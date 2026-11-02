@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const router = useRouter();
@@ -36,7 +35,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Browse listings", href: "/listings" },
+    { label: "Browse Resources", href: "/listings" },
     { label: "How it works", href: "/#how-it-works" },
     { label: "About", href: "/about" },
   ];
@@ -52,7 +51,6 @@ export default function Navbar() {
           {navLinks.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
         </div>
         <div className="sf-nav-actions">
-          <ThemeToggle />
           {user ? (
             <>
               <Link className="sf-button" href="/dashboard">Dashboard</Link>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Overview", href: "/dashboard", mark: "01" },
@@ -74,7 +73,7 @@ export default function DashboardLayout({ children }) {
             <button className="sf-button sf-button--quiet sf-dashboard-menu-button" onClick={() => setSidebarOpen(true)} aria-label="Open navigation">Menu</button>
             <div><span className="sf-label">Workspace</span><strong>{currentPage}</strong></div>
           </div>
-          <div className="sf-dashboard-header-actions"><Link href="/" className="sf-dashboard-home-link">View site</Link><ThemeToggle /></div>
+          <div className="sf-dashboard-header-actions"><Link href="/" className="sf-dashboard-home-link">View site</Link></div>
         </header>
         <main className="sf-dashboard-content">{children}</main>
       </div>

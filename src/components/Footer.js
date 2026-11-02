@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const footerLinks = {
@@ -26,7 +27,7 @@ export default function Footer() {
       <div className="sf-container">
         <div className="sf-footer-grid">
           <div>
-            <Link href="/" className="sf-wordmark">ShareForward</Link>
+            <Link href="/" className="sf-wordmark"><Image src="/shareforward-mark.svg" alt="" width={32} height={32} />ShareForward</Link>
             <p>Connecting generous hearts with those in need. Reduce waste, spread kindness — one donation at a time.</p>
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (

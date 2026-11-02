@@ -19,16 +19,16 @@ export default function HomePage() {
         <section id="hero" className="sf-hero">
           <div className="sf-container sf-hero-grid">
             <div className="sf-fade-in">
-              <p className="sf-label" style={{ color: "var(--accent-ink)", marginBottom: "24px" }}><span className="text-sm font-medium text-gray-">A little extra. A lot of good.</span></p>
-              <h1>Good things deserve a second home.</h1>
-              <p style={{ margin: "28px 0 32px", fontSize: "1.1rem" }}>
-                Share extra food, clothes, or books with verified NGOs.
+              <p className="sf-label sf-hero-kicker">Good things deserve a second home</p>
+              <h1>Your extra can mean everything.</h1>
+              <p className="sf-hero-summary">
+                Share surplus food, clothes, and books with verified NGOs. Give useful resources a second life and help them reach the people who need them.
               </p>
               <div className="sf-hero-actions">
-                <Link href="/register" id="cta-donate" className="sf-button">Share a resource</Link>
-                <Link href="/listings" id="cta-claim" className="sf-button sf-button--quiet">Explore listings</Link>
+                <Link href="/register" id="cta-donate" className="sf-button">Share a Resource</Link>
+                <Link href="/listings" id="cta-claim" className="sf-button sf-button--quiet">Explore Available Resources</Link>
               </div>
-              <p className="sf-label" style={{ marginTop: "24px" }}>Verified NGO partners · Less waste · More community impact</p>
+              <p className="sf-label" style={{ marginTop: "24px" }}>Less waste. More sharing. Stronger communities.</p>
             </div>
 
             <div className="sf-board sf-fade-in" style={{ animationDelay: "120ms" }}>

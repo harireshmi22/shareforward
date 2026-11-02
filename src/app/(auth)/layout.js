@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AuthLayout({ children }) {
   return (
     <div className="sf-auth-shell">
       <aside className="sf-auth-aside">
-        <Link href="/" className="sf-wordmark">ShareForward</Link>
+        <Link href="/" className="sf-wordmark"><Image src="/shareforward-mark.svg" alt="" width={32} height={32} />ShareForward</Link>
         <div>
           <h1>Turn surplus into someone&apos;s next good day.</h1>
           <p>Join donors, NGOs, and volunteers making a practical difference in their communities every day.</p>
