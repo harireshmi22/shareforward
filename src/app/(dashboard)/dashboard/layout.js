@@ -35,10 +35,32 @@ export default function DashboardLayout({ children }) {
     router.push("/");
   };
 
-  if (loading) return <div className="sf-auth-form"><p>Loading dashboard...</p></div>;
-  if (!user) return null;
-
   const currentPage = navItems.find((item) => item.href === pathname)?.label || "Dashboard";
+
+  if (loading) {
+    return (
+      <div className="sf-dashboard">
+        <div className="sf-dashboard-main">
+          <main className="sf-dashboard-content">
+            <div className="sf-auth-form"><p>Loading dashboard...</p></div>
+            <div style={{ display: "none" }}>{children}</div>
+          </main>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="sf-dashboard">
+        <div className="sf-dashboard-main">
+          <main className="sf-dashboard-content">
+            <div style={{ display: "none" }}>{children}</div>
+          </main>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="sf-dashboard">

@@ -31,12 +31,56 @@ export default function ListingsPage() {
   return (
     <>
       <Navbar />
-      <main className="sf-section" style={{ paddingTop: "144px", minHeight: "100svh" }}>
-        <div className="sf-container">
-          <div className="sf-section-head">
-            <h1>Browse listings</h1>
-            <p>Find surplus items near you and claim them for your community. These examples show the shape of the live listing feed.</p>
+
+      {/* Hero banner — same style as About page */}
+      <section
+        className="relative pt-36 pb-24 overflow-hidden"
+        style={{ background: "linear-gradient(160deg, #022c22, #064e3b, #047857)" }}
+      >
+        {/* Ambient blobs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div
+            className="absolute -top-32 -right-32 w-80 h-80 rounded-full opacity-15"
+            style={{ background: "radial-gradient(circle, #34d399, transparent 70%)" }}
+          />
+          <div
+            className="absolute bottom-0 -left-20 w-64 h-64 rounded-full opacity-10"
+            style={{ background: "radial-gradient(circle, #fbbf24, transparent 70%)" }}
+          />
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+            style={{
+              background: "rgba(16, 185, 129, 0.15)",
+              color: "#6ee7b7",
+              border: "1px solid rgba(16, 185, 129, 0.3)",
+            }}
+          >
+            Live Resources
           </div>
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+            Browse Listings
+          </h1>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto" style={{ color: "rgba(203, 213, 225, 0.9)" }}>
+            Find surplus items near you and claim them for your community.
+          </p>
+        </div>
+
+        {/* Wave transition */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+            <path
+              d="M0 30L60 27C120 24 240 18 360 21C480 24 600 36 720 39C840 42 960 36 1080 30C1200 24 1320 18 1380 15L1440 12V60H0V30Z"
+              style={{ fill: "var(--bg-primary)" }}
+            />
+          </svg>
+        </div>
+      </section>
+
+      <main className="sf-section" style={{ minHeight: "60svh" }}>
+        <div className="sf-container">
           <div className="sf-listing-tools">
             <label className="sf-search">
               <span className="sf-label">Search resources</span>
